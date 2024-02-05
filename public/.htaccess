@@ -1,0 +1,59 @@
+# <IfModule mod_rewrite.c>
+#     <IfModule mod_negotiation.c>
+#         Options -MultiViews -Indexes
+#     </IfModule>
+
+#     RewriteEngine On
+#     # modificado
+#     RewriteCond %{REQUEST_URI} !^/public/
+#     RewriteRule ^(.*)$ /public/$1 [L]
+    
+#     # Handle Authorization Header
+#     RewriteCond %{HTTP:Authorization} .
+#     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+    
+#     # modificado
+#     RewriteCond %{HTTPS} !=on
+#     RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+
+#     # Redirect Trailing Slashes If Not A Folder...
+#     RewriteCond %{REQUEST_FILENAME} !-d
+#     RewriteCond %{REQUEST_URI} (.+)/$
+#     RewriteRule ^ %1 [L,R=301]
+
+#     # Send Requests To Front Controller...
+#     RewriteCond %{REQUEST_FILENAME} !-d
+#     RewriteCond %{REQUEST_FILENAME} !-f
+#     RewriteRule ^ index.php [L]
+# </IfModule>
+
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
+
+    RewriteEngine On
+
+    # Redirigir a HTTPS
+    RewriteCond %{HTTPS} !=on
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    # Redirigir a la carpeta "public"
+    RewriteCond %{REQUEST_URI} !^/public/
+    RewriteRule ^(.*)$ /public/$1 [L]
+
+    # Manejar encabezado de autorización
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    # Redirigir las URLs con barra diagonal al final
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [L,R=301]
+
+    # Enviar solicitudes al controlador frontal (index.php)
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+</IfModule>

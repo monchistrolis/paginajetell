@@ -1,0 +1,484 @@
+/* establecer fons-family para toda la web */
+* {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+}
+
+/* body {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+} */
+.navbar {
+    background: #000428; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+        to right,
+        #004e92,
+        #000428
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to right,
+        #004e92,
+        #000428
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    border-radius: 0px 0px 30px 30px;
+}
+
+.img.d-block.w-100 {
+    height: 65vh;
+}
+
+.audio {
+    width: 100%;
+    margin: 10px;
+}
+
+.lineaseparacion {
+    border: 5px solid #021b79;
+}
+.peticion-card:hover {
+    /* transition: box-shadow 0.3s ease-in-out; */
+    transform: scale(1.1);
+    border-radius: 10px;
+}
+.card {
+    border-radius: 10px;
+    margin: 40px;
+
+    background: #780206; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+        to right,
+        #061161,
+        #780206
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to right,
+        #061161,
+        #780206
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.card2 {
+    border-radius: 10px;
+    margin: 40px;
+    background: #1488cc; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+        to right,
+        #2b32b2,
+        #1488cc
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to right,
+        #2b32b2,
+        #1488cc
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.card2 img {
+    margin-bottom: 10px;
+}
+
+.imgevento {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.imgRadio {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.puntolista {
+    width: 7%;
+    height: 7%;
+    margin-right: 5px;
+    margin-top: 9px;
+}
+
+.imgfooter {
+    width: 100%;
+    object-fit: cover;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#facebook,
+#instagram,
+#whatsapp,
+#youtube {
+    font-size: 2em;
+    background-color: #09f; /* Color base */
+    color: #fff;
+    box-shadow: 0 0 20px rgba(9, 159, 255, 0.8), 0 0 30px rgba(9, 159, 255, 0.6),
+        0 0 40px rgba(9, 159, 255, 0.4), 0 0 60px rgba(9, 159, 255, 0.2);
+    border-radius: 29px;
+    padding: 15px 19px;
+    margin: 0 40px;
+    animation: animate 3s linear infinite;
+    text-shadow: 0 0 15px #09f, 0 0 30px #09f, 0 0 45px #09f, 0 0 60px #09f;
+}
+
+#instagram {
+    animation-delay: 0.3s;
+}
+
+#whatsapp {
+    animation-delay: 0.7s;
+}
+
+#youtube {
+    animation-delay: 0.1s;
+}
+
+@keyframes animate {
+    from {
+        filter: hue-rotate(0deg);
+    }
+    to {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.tituloRadio {
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    color: white;
+}
+
+.alertaRedes {
+    background: -webkit-linear-gradient(
+        to right,
+        #004e92,
+        #000428
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to right,
+        #004e92,
+        #000428
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    text-align: center;
+    color: white;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 50px;
+}
+
+.cardbtn {
+    color: #fff;
+}
+.cardbtn:hover {
+    color: #e2e2e2;
+    text-decoration: none;
+}
+/* Estilo para los enlaces sin hover */
+.nav-link {
+    color: #000428;
+    text-decoration: none;
+    transition: opacity 0.3s ease; /* Agregamos una transición de opacidad para suavizar el efecto */
+}
+
+/* Estilo para los enlaces cuando se hace hover */
+.nav-link:hover {
+    opacity: 0.7; /* Reduce la opacidad al hacer hover */
+}
+
+/* Estilo para los enlaces con clase varones */
+
+.varones:hover {
+    color: #e2e2e2;
+    background: #0f0053;
+    border-radius: 10px;
+    margin: 1px;
+}
+
+/* Estilos similares para los otros enlaces */
+
+.mujeres:hover {
+    color: #e2e2e2;
+    background: #b10068;
+    border-radius: 10px;
+    margin: 1px;
+}
+
+.jovenes:hover {
+    color: #e2e2e2;
+    background: #027823;
+    border-radius: 10px;
+    margin: 1px;
+}
+
+.ninos:hover {
+    color: #e2e2e2;
+    background: #e36c1d;
+    border-radius: 10px;
+    margin: 1px;
+}
+
+.pastores:hover {
+    color: #e2e2e2;
+    background: #780206;
+    border-radius: 10px;
+    margin: 1px;
+}
+
+.radio:hover {
+    color: #e2e2e2;
+    background: #1488cc;
+    border-radius: 10px;
+    margin: 1px;
+}
+
+.aliniacion {
+    display: flex;
+    margin: 15px 0;
+}
+
+.conigleas {
+    position: relative;
+}
+
+.imgiglesia {
+    width: 80%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s, border-radius 0.3s;
+    border-radius: 10px;
+}
+
+.conigleas:hover .imgiglesia {
+    transform: scale(0.9);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+    border-radius: 10px;
+}
+.imgpastores {
+    width: 40%;
+}
+
+.conigleas:hover .overlay {
+    opacity: 1;
+}
+
+.overlay p {
+    color: white;
+    font-size: 24px;
+    text-align: center;
+}
+
+.cuerpoigle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cuerpoigle p {
+    text-align: center;
+}
+
+.lineaDivisora {
+    border: 5px solid #021b79;
+}
+.nomPastores {
+    background: #e2e2e2;
+    border-radius: 5px;
+    padding: 10px;
+    color: #000428;
+}
+
+.imgvarones {
+    border-radius: 10px;
+}
+.imagenvarones {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s, border-radius 0.3s;
+    border-radius: 10px;
+}
+
+.textovarones {
+    background: #e2e2e2;
+    border-radius: 5px;
+    padding: 10px;
+    color: #000428;
+}
+.acordionexterior {
+    background: #cfe2ff;
+    border-radius: 10px;
+    padding: 10px;
+}
+.imgver {
+    width: 80%;
+    padding: 10px;
+    border-radius: 10px;
+    background: #1488cc; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+        to right,
+        #2b32b2,
+        #1488cc
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2b32b2, #1488cc);
+}
+.btnver {
+    background: green;
+    margin: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    border-radius: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* galeria */
+/* Estilos generales */
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px; /* Espacio entre las imágenes */
+}
+
+.imagenesGaleria {
+    border-radius: 20px;
+}
+
+/* Estilos responsivos */
+
+.animated-word {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.letter {
+    transition: 0.4s;
+    transform: translateX(0);
+    cursor: grab;
+    color: black;
+    font-size: 50px;
+}
+
+.letter:hover {
+    transform: translateY(-1rem);
+    background: -webkit-linear-gradient(
+        120deg,
+        hsl(19, 90%, 52%),
+        hsl(56, 100%, 50%)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* styles.css */
+.flotante {
+    position: absolute;
+    top: 50px; /* Posición vertical inicial */
+    left: 50px; /* Posición horizontal inicial */
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.colapse {
+    background: #e2e2e2;
+    border-radius: 5px;
+    padding: 10px;
+    color: #000428;
+}
+.videoYoutube {
+    object-fit: cover;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.btnmap {
+    background: #1488cc;
+    background: -webkit-linear-gradient(to right, #2b32b2, #1488cc);
+    background: linear-gradient(to right, #2b32b2, #1488cc);
+}
+.ContenedorRadio {
+    margin-left: 30px;
+}
+
+.titulo {
+    display: flex;
+    place-content: center;
+    margin-top: 80px;
+}
+.btnCargar {
+    display: flex;
+    place-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.cardDescarga {
+    display: flex;
+    place-content: center;
+    border: solid rgb(0, 65, 129, 0.5);
+    border-radius: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    
+}
+
+
+
+.btnDescarga {
+    display: flex;
+    place-content: center;
+    margin: 10px;
+    transition: all 1s ease;
+}
+
+.btnDescarga:hover {
+    transform: scale(1.1);
+}
+.titulodescarga {
+    display: flex;
+    place-content: center;
+    margin-top: 10px;
+}
+
+.imgdescargas {
+    width: 70%;
+    padding: 5px;
+    border-radius: 20px;
+}
+.imgdescarga {
+    display: flex;
+    place-content: center;
+}
+.tituloDescarga {
+    display: flex;
+    place-content: center;
+}
+.textoDescarga {
+    display: flex;
+    place-content: center;
+}
+.contenederTextoDescarga {
+    display: flex;
+    place-content: center;
+}
