@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="{{ asset('css/App.css') }}">
     <link rel="stylesheet" href="{{ asset('js/app.js') }}">
     <link rel="icon" href="{{ asset('images/logo2023.png') }}">
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     <title>Ministerio Evangelistico Jetell</title>
 </head>
@@ -23,7 +24,7 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a href="{{ route('/') }}">
-                <img src="{{ asset('images/logoigle.png') }}" width="50" height="40" class="rounded"
+                <img class="imglogo" src="{{ asset('images/logoigle.png') }}" width="50" height="40" class="rounded"
                     alt="LogoJettel">
             </a>
             <button class="navbar-toggler" style="background: white" type="button" data-bs-toggle="collapse"

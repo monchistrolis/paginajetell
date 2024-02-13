@@ -1,7 +1,17 @@
-.body{
-    background-color: #f30000;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 100;
-    height: 100vh;
-    margin: 0;
+.imglogoRadio {
+    width: 80%;
+    display: flex;
+    place-content: center;
+}
+.logoRadio {
+    display: flex;
+    place-content: center;
+}
+.tituloReproductor {
+    display: flex;
+    place-content: center;
+}
+
+.imglogo{
+    margin-left: 15px;
 }

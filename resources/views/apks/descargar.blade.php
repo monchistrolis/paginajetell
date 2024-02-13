@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="{{ asset('css/App.css') }}">
     <link rel="stylesheet" href="{{ asset('js/app.js') }}">
     <link rel="icon" href="{{ asset('images/logo2023.png') }}">
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+
 
     <title>Ministerio Evangelistico Jetell</title>
 </head>
