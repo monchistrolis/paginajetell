@@ -65,11 +65,11 @@
                         
 
                     </li>
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="{{ route('carga') }}">
                             <h6 class="text-white"> CARGA DE ARCHIVOS</h6>
                         </a>
-                    </li>
+                    </li> --}}
                 </ul>
             </div>
         </div>

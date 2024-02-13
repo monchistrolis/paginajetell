@@ -66,20 +66,21 @@ class ApkController extends Controller
     {
         // Encontrar el archivo APK por su ID
         $apk = Apk::findOrFail($id);
-    
+
         // Obtener la ruta del archivo APK en el almacenamiento
         $rutaArchivo = storage_path('app/archivos/' . $apk->archivo);
-    
+
         // Verificar si el archivo existe
         if (!file_exists($rutaArchivo)) {
             // Si no existe, retornar una respuesta de error
             return response()->json(['error' => 'Archivo no encontrado'], 404);
         }
-    
+
         // Obtener la extensión del archivo basada en su nombre
         $extension = pathinfo($rutaArchivo, PATHINFO_EXTENSION);
-    
+
         // Retornar la descarga del archivo APK con la extensión correcta
         return response()->download($rutaArchivo, $apk->nombre . '.' . $extension);
     }
+   
 }
