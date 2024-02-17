@@ -1,3 +1,87 @@
+.imglogoRadio {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: centers;
+}
+
+.tituloReproductor {
+    display: flex;
+    place-content: center;
+}
+
+.imglogo {
+    margin-left: 15px;
+}
+.btnVer {
+    margin-top: 10px;
+}
+.botonesDescarga {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ContenedorRadio {
+    position: fixed;
+    width: 10%;
+    bottom: 15px;
+    margin-left: 15px;
+    border-radius: 15px;
+    border: solid 1px #000428;
+    box-shadow: 0px 0px 10px 0px #000428;
+    text-align: center;
+    background: #1488cc;
+    background: -webkit-linear-gradient(to right, #2b32b2, #1488cc);
+    background: linear-gradient(to right, #2b32b2, #1488cc);
+    /* que quede delanto de todo */
+    z-index: 1000;
+}
+
+@media only screen and (max-width: 768px) {
+    .ContenedorRadio {
+        flex-basis: 50%; /* Dos columnas en dispositivos de pantalla pequeña */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .ContenedorRadio {
+        flex-basis: 100%; /* Una columna en dispositivos muy pequeños */
+    }
+}
+.tituloReproductor {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.botonReproduccion {
+    background: #004e92;
+    border-radius: 10px;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.playing {
+    background-color: red;
+    /* Cambia el color de fondo a rojo cuando se está reproduciendo */
+    color: white;
+    /* Cambia el color del texto a blanco cuando se está reproduciendo */
+}
+
+.bi {
+    color: #fff;
+}
+
+.imglogoRadio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+
 /* establecer fons-family para toda la web */
 * {
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
@@ -437,11 +521,7 @@
     border-radius: 20px;
     margin-top: 50px;
     margin-bottom: 50px;
-
-    
 }
-
-
 
 .btnDescarga {
     display: flex;

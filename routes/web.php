@@ -74,7 +74,6 @@ Route::get('/carga', [ApkController::class,'carga'])->name('carga');
 Route::post('/apk.store', [ApkController::class,'store'])->name('apk.store');
 Route::get('/apks.descargar', [ApkController::class, 'mostrarDescargas'])->name('apks.mostrar_descargas');
 Route::get('/apks/descargar/{id}', [ApkController::class,'descargar'])->name('apks.descargar');
-Route::get('apks/{id}/ver',  [ApkController::class,'vista'])->name('apks.ver');
 
 
 

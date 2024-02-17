@@ -1,5 +1,4 @@
 @extends('layouts.footer')
-@extends('layouts.radio')
 <!-- resources/views/apks/create.blade.php -->
 <!DOCTYPE html>
 <html lang="es">
@@ -121,3 +120,6 @@
             @endforeach
         </div>
     </div>
+</body>
+@extends('layouts.radio')
+

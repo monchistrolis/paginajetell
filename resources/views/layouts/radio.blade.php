@@ -8,7 +8,10 @@
     <title>Ministerio Evangelistico Jetell</title>
     <link rel="stylesheet" href="{{ asset('css/App.css') }}">
     <link rel="stylesheet" href="{{ asset('js/app.js') }}">
-    <style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    {{-- <style>
         .ContenedorRadio {
             position: fixed;
             width: 10%;
@@ -61,21 +64,21 @@
             margin-left: 10px;
             border-radius: 10px;
         }
-    </style>
+    </style> --}}
 </head>
 
 <body>
-    <div class="ContenedorRadio col-lg-2 col-md-2 col-sm-2 col-3">
-        <div class="tituloReproductor col-12">
-            <h3 class=" textoreproductor col-10">Sintonia Clave</h3>
+    <div class="ContenedorRadio  col-lg-2 col-md-2 col-sm-2 col-2">
+        <div class="tituloReproductor ">
+            <h3 class=" textoreproductor">Sintonia Clave</h3>
         </div>
         <div class="cuerpoReproductor">
             <div class="logoRadio">
                 <img class="imglogoRadio" src="{{ asset('images/logoRadio.jpg') }}" alt="logo" class="img-fluid">
             </div>
             <div class="botonesReproduccion col-12">
-                <button class="botonReproduccion col-8" id="play"><i class="bi bi-play-fill"></i>Play</button>
-                <button class="botonReproduccion col-8" id="pause"><i class="bi bi-pause-fill"></i>Pause</button>
+                <button class="botonReproduccion " id="play"><i class="bi bi-play-fill"></i>Play</button>
+                <button class="botonReproduccion " id="pause"><i class="bi bi-pause-fill"></i>Pause</button>
             </div>
         </div>
     </div>
