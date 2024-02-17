@@ -1,12 +1,10 @@
 .imglogoRadio {
     width: 80%;
     display: flex;
-    place-content: center;
+    justify-content: center;
+    align-items: centers;
 }
-.logoRadio {
-    display: flex;
-    place-content: center;
-}
+
 .tituloReproductor {
     display: flex;
     place-content: center;
@@ -14,4 +12,12 @@
 
 .imglogo{
     margin-left: 15px;
+}
+.btnVer{
+    margin-top: 10px;
+}
+.botonesDescarga{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

@@ -65,7 +65,7 @@
 </head>
 
 <body>
-    <div class="ContenedorRadio col-lg-1 col-md-2 col-sm-2 col-3">
+    <div class="ContenedorRadio col-lg-2 col-md-2 col-sm-2 col-3">
         <div class="tituloReproductor col-12">
             <h3 class=" textoreproductor col-10">Sintonia Clave</h3>
         </div>

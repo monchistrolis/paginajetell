@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Apk;
+use Illuminate\Support\Facades\Storage;
 
 class ApkController extends Controller
 {
@@ -82,5 +83,30 @@ class ApkController extends Controller
         // Retornar la descarga del archivo APK con la extensión correcta
         return response()->download($rutaArchivo, $apk->nombre . '.' . $extension);
     }
-   
+
+    public function vista($id)
+    {
+        // Obtener el modelo correspondiente al archivo
+        $apk = Apk::findOrFail($id);
+    
+        // Obtener la ruta del archivo
+        $archivo = storage_path('app/archivos/' . $apk->nombre);
+    
+        // Verificar si el archivo existe
+        if (!Storage::exists('archivos/' . $apk->nombre)) {
+            abort(404);
+        }
+    
+        // Obtener la extensión del archivo
+        $extension = pathinfo($archivo, PATHINFO_EXTENSION);
+    
+        // Verificar si la extensión del archivo es PDF o DOC/DOCX
+        if ($extension !== 'pdf' && $extension !== 'doc' && $extension !== 'docx') {
+            abort(404); // Si el archivo no es PDF ni DOC/DOCX, mostrar error 404
+        }
+    
+        // Retornar la vista del archivo con los datos necesarios
+        return view('apks.descargar', compact('archivo', 'apk'));
+    }
+    
 }

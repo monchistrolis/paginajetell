@@ -104,20 +104,17 @@
             @foreach ($apks as $apk)
                 <div class="col-lg-3 col-md-6 col-sm-6 col-10">
                     <div class="cardDescarga ">
-
                         <div class="card-bodyDescarga">
                             <div class="titulodescarga">
                                 <h5 class="card-titulo text-center">{{ $apk->nombre }}</h5>
-
                             </div>
                             <div class="imgdescarga">
                                 <img class="imgdescargas" src="{{ asset('images/logoRadio.jpg') }}" alt="">
                             </div>
-                            <p class="card-text text-center">Este Archivos fue Hecho Para ti.</p>
+                            <p class="card-text text-center">Este Archivo fue hecho para ti.</p>
                             <div class="btnDescarga">
                                 <a href="{{ route('apks.descargar', $apk->id) }}" class="btn btn-primary">Descargar</a>
                             </div>
-
                         </div>
                     </div>
                 </div>
