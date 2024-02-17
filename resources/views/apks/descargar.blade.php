@@ -109,7 +109,7 @@
                                 <h5 class="card-titulo text-center">{{ $apk->nombre }}</h5>
                             </div>
                             <div class="imgdescarga">
-                                <img class="imgdescargas" src="{{ asset('images/logoRadio.jpg') }}" alt="">
+                                <img class="imgdescargas" src="{{ asset('images/logoRadio.jpg') }}" alt="radio">
                             </div>
                             <p class="card-text text-center">Este Archivo fue hecho para ti.</p>
                             <div class="btnDescarga">

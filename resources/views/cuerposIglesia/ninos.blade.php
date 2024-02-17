@@ -59,7 +59,7 @@
     </div>
     <div>
         <blockquote class="d-flex justify-content-center">
-            Haz click para ver los Objetivos <img src="{{ asset('images/cursor.png') }}" alt="" style="width: 2%">
+            Haz click para ver los Objetivos <img src="{{ asset('images/cursor.png') }}" alt="niños" style="width: 2%">
         </blockquote>
 
     </div>

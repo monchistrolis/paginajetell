@@ -27,7 +27,7 @@
 
     <div class="container">
         <div class="imgvarones">
-            <img class="imagenvarones mt-3" src="{{ asset('images/ovenes.jpg') }}" alt="">
+            <img class="imagenvarones mt-3" src="{{ asset('images/ovenes.jpg') }}" alt="Jovenes">
         </div>
     </div>
 
@@ -54,7 +54,7 @@
     </div>
     <div>
         <blockquote class="d-flex justify-content-center">
-            Haz click para ver los Objetivos <img src="{{ asset('images/cursor.png') }}" alt="" style="width: 2%">
+            Haz click para ver los Objetivos <img src="{{ asset('images/cursor.png') }}" alt="cursor" style="width: 2%">
         </blockquote>
 
     </div>

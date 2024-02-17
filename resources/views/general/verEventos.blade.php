@@ -11,7 +11,7 @@
     <div class="container mb-3">
         <div class="row col ">
             <div class="col-lg-6 col-md-6  d-flex justify-content-center" style="object-fit: cover;">
-                <img class="imgver mb-2" src="{{asset('storage').'/'.$descripcion->imagen}}" alt="">
+                <img class="imgver mb-2" src="{{asset('storage').'/'.$descripcion->imagen}}" alt="eventos">
             </div>
             <div class="col-lg-6 col-md-6 p-4">
                 <h3>Descripción de Evento</h3>
