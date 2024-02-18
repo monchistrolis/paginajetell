@@ -76,7 +76,33 @@
 
 
 
-<script>
+
+
+
+
+{{-- http://audio.crearchile.info:9380/; https://audio4.tustreaming.cl:10970/stream --}}
+
+<body>
+    <div class="ContenedorRadio  col-lg-2 col-3">
+        <div class="row d-flex justify-content-center">
+            <div class="tituloReproductor col-md-10 col-9">
+                <h3 class="textoreproductor ">Sintonia Clave</h3>
+            </div>
+                <div class="logoRadio col-lg-12 col-md-10 col-9">
+                    <img class="imglogoRadio" src="{{ asset('images/logoRadio.jpg') }}" alt="logo"
+                        class="img-fluid">
+                </div>
+                <div class="botonesReproduccion col-md-12">
+                    <button class="botonReproduccion col-md-10 col-9" id="play"><i
+                            class="bi bi-play-fill"></i></button>
+                    <button class="botonReproduccion col-md-10 col-9" id="pause"><i
+                            class="bi bi-pause-fill"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <audio id="audioPlayer" src="http://audio.crearchile.info:9380/;"></audio><script>
     const audio = document.getElementById("audioPlayer");
     const playButton = document.getElementById("play");
     const pauseButton = document.getElementById("pause");
@@ -107,32 +133,6 @@
         }
     }
 </script>
-
-
-
-{{-- http://audio.crearchile.info:9380/; https://audio4.tustreaming.cl:10970/stream --}}
-
-<body>
-    <div class="ContenedorRadio  col-lg-2 col-3">
-        <div class="row d-flex justify-content-center">
-            <div class="tituloReproductor col-md-10 col-9">
-                <h3 class="textoreproductor ">Sintonia Clave</h3>
-            </div>
-                <div class="logoRadio col-lg-12 col-md-10 col-9">
-                    <img class="imglogoRadio" src="{{ asset('images/logoRadio.jpg') }}" alt="logo"
-                        class="img-fluid">
-                </div>
-                <div class="botonesReproduccion col-md-12">
-                    <button class="botonReproduccion col-md-10 col-9" id="play"><i
-                            class="bi bi-play-fill"></i></button>
-                    <button class="botonReproduccion col-md-10 col-9" id="pause"><i
-                            class="bi bi-pause-fill"></i></button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <audio id="audioPlayer" src="http://audio.crearchile.info:9380/;"></audio>
 </body>
 
 
