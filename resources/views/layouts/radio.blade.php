@@ -3,15 +3,20 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ministerio Evangelistico Jetell</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
+    </script>
+    <!-- Option 1: Include in HTML -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="{{ asset('css/App.css') }}">
     <link rel="stylesheet" href="{{ asset('js/app.js') }}">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-    {{-- <style>
+    <style>
         .ContenedorRadio {
             position: fixed;
             width: 10%;
@@ -57,62 +62,78 @@
         }
 
         .imglogoRadio {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 90%;
-            margin-left: 10px;
-            border-radius: 10px;
+            width: 100%;
+            border-radius: 30px;
         }
-    </style> --}}
+
+        .logoRadio{
+            display: flex;
+            place-content: center;
+        }
+    </style>
 </head>
 
+
+
+
+<script>
+    const audio = document.getElementById("audioPlayer");
+    const playButton = document.getElementById("play");
+    const pauseButton = document.getElementById("pause");
+
+    playButton.addEventListener("click", function() {
+        if (audio.paused) {
+            audio.play();
+        } else {
+            audio.pause();
+        }
+        updatePlayButtonState();
+    });
+
+    pauseButton.addEventListener("click", function() {
+        audio.pause();
+        updatePlayButtonState();
+    });
+
+    audio.addEventListener("ended", function() {
+        updatePlayButtonState();
+    });
+
+    function updatePlayButtonState() {
+        if (audio.paused) {
+            playButton.innerHTML = '<i class="bi bi-play-fill"></i>Play';
+        } else {
+            playButton.innerHTML = '<i class="bi bi-pause-fill"></i>Pause';
+        }
+    }
+</script>
+
+
+
+{{-- http://audio.crearchile.info:9380/; https://audio4.tustreaming.cl:10970/stream --}}
+
 <body>
-    <div class="ContenedorRadio  col-lg-2 col-md-2 col-sm-2 col-2">
-        <div class="tituloReproductor ">
-            <h3 class=" textoreproductor">Sintonia Clave</h3>
-        </div>
-        <div class="cuerpoReproductor">
-            <div class="logoRadio">
-                <img class="imglogoRadio" src="{{ asset('images/logoRadio.jpg') }}" alt="logo" class="img-fluid">
+    <div class="ContenedorRadio  col-lg-2 col-3">
+        <div class="row d-flex justify-content-center">
+            <div class="tituloReproductor col-md-10 col-9">
+                <h3 class="textoreproductor ">Sintonia Clave</h3>
             </div>
-            <div class="botonesReproduccion col-12">
-                <button class="botonReproduccion " id="play"><i class="bi bi-play-fill"></i>Play</button>
-                <button class="botonReproduccion " id="pause"><i class="bi bi-pause-fill"></i>Pause</button>
+                <div class="logoRadio col-lg-12 col-md-10 col-9">
+                    <img class="imglogoRadio" src="{{ asset('images/logoRadio.jpg') }}" alt="logo"
+                        class="img-fluid">
+                </div>
+                <div class="botonesReproduccion col-md-12">
+                    <button class="botonReproduccion col-md-10 col-9" id="play"><i
+                            class="bi bi-play-fill"></i></button>
+                    <button class="botonReproduccion col-md-10 col-9" id="pause"><i
+                            class="bi bi-pause-fill"></i></button>
+                </div>
             </div>
         </div>
     </div>
 
-    <audio id="audioPlayer" src="http://audio.crearchile.info:9380/; "></audio>
-    
-{{-- http://audio.crearchile.info:9380/; https://audio4.tustreaming.cl:10970/stream--}}
-
-    <script>
-        const audio = document.getElementById("audioPlayer");
-        const playButton = document.getElementById("play");
-        const pauseButton = document.getElementById("pause");
-
-        playButton.addEventListener("click", function() {
-            if (audio.paused) {
-                audio.play();
-                playButton.classList.add("playing"); // Agregar una clase "playing" al botón
-            } else {
-                audio.pause();
-                playButton.classList.remove("playing"); // Eliminar la clase "playing" del botón
-            }
-        });
-
-        audio.addEventListener("ended", function() {
-            playButton.classList.remove("playing"); // Cuando el audio termina, eliminar la clase "playing"
-        });
-
-        pauseButton.addEventListener("click", function() {
-            audio.pause();
-            playButton.classList.remove(
-                "playing"); // Si se pausa desde el botón "Pause", eliminar la clase "playing"
-        });
-    </script>
-
+    <audio id="audioPlayer" src="http://audio.crearchile.info:9380/;"></audio>
 </body>
+
 
 </html>
