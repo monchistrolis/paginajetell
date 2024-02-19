@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Apk extends Model
 {
-    protected $fillable = ['nombre', 'archivo'];
+    protected $fillable = ['nombre','categoria', 'archivo'];
 }

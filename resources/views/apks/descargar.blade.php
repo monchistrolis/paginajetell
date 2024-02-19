@@ -22,12 +22,17 @@
             Bendiciones, Ministerio Evangelistico Jesús Te Llama (JETELL)
         </p>
     </div>
+
+    </div>
     <div class="container carddesca">
         <div class="row col-lg-12 col-md-12 col-sm-12 col-12 d-flex justify-content-center">
             @foreach ($apks as $apk)
                 <div class="col-lg-3 col-md-6 col-sm-6 col-10">
                     <div class="cardDescarga ">
                         <div class="card-bodyDescarga">
+                            <div class="categoria d-flex justify-content-end mx-2">
+                                <p class="textCategoria">{{$apk->categoria}}</p>
+                            </div>
                             <div class="titulodescarga">
                                 <h5 class="card-titulo text-center">{{ $apk->nombre }}</h5>
                             </div>

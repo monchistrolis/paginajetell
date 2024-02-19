@@ -500,3 +500,9 @@
     display: flex;
     place-content: center;
 }
+
+.textCategoria {
+    color: gray;
+    opacity: 0.5;
+    text-decoration: underline;
+}

@@ -26,6 +26,15 @@
                         <input type="text" class="form-control" id="nombre" name="nombre" required>
                     </div>
                     <div class="form-group">
+                        <label for="">Categoria</label>
+                        <select class="form-select" aria-label="Default select example" id="categoria" name="categoria">
+                            <option selected>Selecciona la categoria del material a sibir</option>
+                            <option value="Materia de Estudio">Materia de Estudio</option>
+                            <option value="Libros">Libros</option>
+                            <option value="Niños">Niños</option>
+                          </select>
+                    </div>
+                    <div class="form-group">
                         <label for="archivo">Archivo:</label>
                         <input type="file" class="form-control" id="archivo" name="archivo" required>
                     </div>
