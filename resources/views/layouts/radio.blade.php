@@ -95,8 +95,7 @@
                 <div class="botonesReproduccion col-md-12">
                     <button class="botonReproduccion col-md-10 col-9" id="play"><i
                             class="bi bi-play-fill"></i></button>
-                    <button class="botonReproduccion col-md-10 col-9" id="pause"><i
-                            class="bi bi-pause-fill"></i></button>
+                  
                 </div>
             </div>
         </div>
